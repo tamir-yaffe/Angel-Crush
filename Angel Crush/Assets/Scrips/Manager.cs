@@ -10,12 +10,21 @@ public class Manager : MonoBehaviour
 
     //Variables
     public static bool dropCoin;
-    public static bool allEnemiesOut = false;
+    public static bool allEnemiesOut;
     // Start is called before the first frame update
     void Start()
     {
         dropCoin = false;
-
+        allEnemiesOut = false;
+        /*if (LevelManager.enemyAmount == ShotEngine.hit)
+        {
+            InvokeRepeating(nameof(CreateEnemies), Time.time, Random.Range(0.5f, 1.6f));
+        }
+        else
+        {
+            CancelInvoke(nameof(CreateEnemies));
+        }*/
+        
     }
 
     // Update is called once per frame
@@ -28,11 +37,11 @@ public class Manager : MonoBehaviour
         }
 
 
-        if (allEnemiesOut == false)
+        /*if (allEnemiesOut == false)
         {
-            StartCoroutine(CreateDemons());
             allEnemiesOut = true;
-        }
+            StartCoroutine(CreateDemons());
+        }*/
 
     }
     IEnumerator CreateDemons()
@@ -42,7 +51,12 @@ public class Manager : MonoBehaviour
             Instantiate(enemy, new Vector2(Random.Range(-2.3f, 2.31f), 2.8f), enemy.transform.rotation);
             yield return new WaitForSeconds(Random.Range(0.5f, 1.6f));
         }
+    }
 
+    void CreateEnemies()
+    {
+        Instantiate(enemy, new Vector2(Random.Range(-2.3f, 2.31f), 2.8f), enemy.transform.rotation);
+        
     }
 
     void CreateCoin()

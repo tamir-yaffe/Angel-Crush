@@ -7,11 +7,13 @@ public class LevelManager : MonoBehaviour
     /* if instanciate not work properly remove this script from level manager
     and add it back*/
     public static int enemyAmount;
+    public static bool success;
     // Start is called before the first frame update
     void Start()
     {
         //enemyAmount = Random.Range(10, 16);
-        enemyAmount = 10;
+        enemyAmount = 5;
+        success = false;
     }
 
     // Update is called once per frame
