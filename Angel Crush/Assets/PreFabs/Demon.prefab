@@ -175,4 +175,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   demon: {fileID: 2471036021783681331}
-  coin: {fileID: 0}
+  coin: {fileID: 7104660857690325630, guid: 53986793b07c63940858ce1576565f04, type: 3}

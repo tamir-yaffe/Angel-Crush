@@ -5,7 +5,7 @@ using UnityEngine;
 public class DemonEngine : MonoBehaviour
 {
     public GameObject demon;
-    public GameObject coin;
+    
     
     // Start is called before the first frame update
     void Start()

@@ -14,7 +14,6 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         enemyAmount = Random.Range(10, 16);
     }
     void Level1()
