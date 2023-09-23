@@ -48,4 +48,12 @@ public class PlayerMovement : MonoBehaviour
             dir = 0;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Coin")
+        {
+            Destroy(collision.gameObject);
+            coins += 10;
+        }
+    }
 }

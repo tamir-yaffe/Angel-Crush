@@ -23,6 +23,7 @@ public class ShotEngine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Manager.dropCoin = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
             //EnemyManager.enemyCount--;
