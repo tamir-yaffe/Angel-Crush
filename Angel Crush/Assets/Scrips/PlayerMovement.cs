@@ -34,5 +34,6 @@ public class PlayerMovement : MonoBehaviour
             dir = 0;
         }
     }
+   
 
 }
