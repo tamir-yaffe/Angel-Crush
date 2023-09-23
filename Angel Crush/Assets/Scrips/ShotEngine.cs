@@ -6,6 +6,7 @@ public class ShotEngine : MonoBehaviour
 {
     public static bool dead;
     public static Vector2 deamonPos;
+    public static int hit;
     void Start()
     {
         dead = false;
@@ -26,10 +27,10 @@ public class ShotEngine : MonoBehaviour
         {
             deamonPos = new Vector2(transform.position.x, transform.position.y);
             dead = true;
+            hit++;
             Destroy(collision.gameObject);
             Destroy(gameObject);
             PlayerMovement.score += 10; 
-            LevelManager.enemyAmount--;
             //EnemyManager.enemyCount--;
         }
     }

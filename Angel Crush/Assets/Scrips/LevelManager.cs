@@ -10,18 +10,18 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //enemyAmount = Random.Range(10, 16);
+        enemyAmount = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyAmount = Random.Range(10, 16);
-
+        Level1();
     }
     void Level1()
     {
-        if (enemyAmount == 0)
+        if (enemyAmount == ShotEngine.hit)
         {
             print("good");
         }
