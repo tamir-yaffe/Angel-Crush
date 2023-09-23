@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Variabels
     float dir;
     int speed;
-    int score;
+    public static int score;
     int coins;
     void Start()
     {
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
-            coins += 10;
+            coins += 3;
         }
     }
 }

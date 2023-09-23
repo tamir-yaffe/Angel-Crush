@@ -27,6 +27,7 @@ public class ShotEngine : MonoBehaviour
             Manager.dropCoin = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            PlayerMovement.score += 10;
             //EnemyManager.enemyCount--;
         }
     }

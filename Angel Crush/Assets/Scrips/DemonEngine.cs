@@ -16,7 +16,7 @@ public class DemonEngine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, -5 * Time.deltaTime, 0);
+        transform.Translate(0, -2 * Time.deltaTime, 0);
         if (transform.position.y <-5.7f)
         {
             Destroy(gameObject);
