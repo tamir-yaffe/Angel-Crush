@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     /* if instanciate not work properly remove this script from level manager
-    and add it back*/ 
+    and add it back*/
     public static int enemyAmount;
     // Start is called before the first frame update
     void Start()

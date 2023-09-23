@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public TMP_Text scoreText;
     public TMP_Text coinsText;
-    
+
     // Variabels
     float dir;
     int speed;
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         scoreText.SetText("SCORE: " + score);
-        coinsText.SetText("COINS: " +  coins);
+        coinsText.SetText("COINS: " + coins);
     }
 
     private void Movement()
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Coin")
+        if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
             coins += 3;

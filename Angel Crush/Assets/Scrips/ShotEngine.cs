@@ -30,7 +30,7 @@ public class ShotEngine : MonoBehaviour
             hit++;
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            PlayerMovement.score += 10; 
+            PlayerMovement.score += 10;
             //EnemyManager.enemyCount--;
         }
     }

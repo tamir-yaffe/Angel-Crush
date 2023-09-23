@@ -9,7 +9,7 @@ public class CoinEngine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class CoinEngine : MonoBehaviour
     {
         coinForce = new Vector2(Random.Range(0, 1.5f), Random.Range(0, 1.5f));
         transform.Translate(0, -1.5f * Time.deltaTime, 0);
-        if(transform.position.y < -5.7f)
+        if (transform.position.y < -5.7f)
         {
             Destroy(gameObject);
-        } 
+        }
     }
 }

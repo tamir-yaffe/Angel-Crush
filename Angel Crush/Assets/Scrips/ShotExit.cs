@@ -9,7 +9,7 @@ public class ShotExit : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class ShotExit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(shotPreFab, new Vector2(transform.position.x, transform.position.y)
-                , shotPreFab.transform.rotation) ;
+                , shotPreFab.transform.rotation);
             //audioS.PlayOneShot(shotSound);
         }
     }
