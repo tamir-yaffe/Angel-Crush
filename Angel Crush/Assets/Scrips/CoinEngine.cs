@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinEngine : MonoBehaviour
 {
+    public GameObject coin;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,16 @@ public class CoinEngine : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (ShotEngine.dead== true)
+        {
+            CreateCoin();
+            ShotEngine.dead = false;
+        }
+    }
+
+    void CreateCoin()
+    {
+        Instantiate(coin, new Vector2(transform.position.x, transform.position.y), coin.transform.rotation);
     }
 }

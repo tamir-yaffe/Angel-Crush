@@ -21,18 +21,18 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinExit = new Vector2(enemyLoaction.position.x, enemyLoaction.position.y);
-        coinForce = new Vector2(Random.Range(0, 1.5f), Random.Range(0, 1.5f));
+        //coinExit = new Vector2(enemyLoaction.position.x, enemyLoaction.position.y);
+        //coinForce = new Vector2(Random.Range(0, 1.5f), Random.Range(0, 1.5f));
         if (dropCoin)
         {
-            DropCoins();
+            //DropCoins();
             dropCoin = false;
         }
     }
-    void DropCoins()
+    /*void DropCoins()
     {
         Instantiate(coin, coinExit, coin.transform.rotation);
         coin.AddComponent<Rigidbody2D>();
         coin.GetComponent<Rigidbody2D>().AddForce(coinForce);
-    }
+    }*/
 }

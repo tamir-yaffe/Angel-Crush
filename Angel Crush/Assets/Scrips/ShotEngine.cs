@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ShotEngine : MonoBehaviour
 {
-   
+    public static bool dead;
     void Start()
     {
-        
+        dead = false;
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class ShotEngine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            dead = true;
             Manager.dropCoin = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
