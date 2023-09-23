@@ -19,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         dir = Input.GetAxis("Horizontal");
-        if (dir <= 1 && transform.position.x < 2.1f)
+        if (dir > 0 && transform.position.x < 2.3f)
         {
             transform.Translate(dir * speed * Time.deltaTime, 0, 0);
         }
-        else if (dir >= -1 && transform.position.x > -2.1f)
+        else if (dir < 0 && transform.position.x > -2.3f)
         {
             transform.Translate(dir * speed * Time.deltaTime, 0, 0);
         }
