@@ -7,12 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     // GameObjects
     public GameObject player;
+    
     // Variabels
     float dir;
     int speed;
     void Start()
     {
         speed = 5;
+        transform.position = new Vector2(0, -3.7f);
     }
 
     // Update is called once per frame
@@ -32,4 +34,5 @@ public class PlayerMovement : MonoBehaviour
             dir = 0;
         }
     }
+
 }
