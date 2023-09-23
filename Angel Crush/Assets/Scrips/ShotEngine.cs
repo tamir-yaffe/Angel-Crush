@@ -14,7 +14,7 @@ public class ShotEngine : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 10 * Time.deltaTime, 0);
-        if(transform.position.y >= 5.7f)
+        if (transform.position.y >= 5.7f)
         {
             Destroy(gameObject);
         }
@@ -27,7 +27,8 @@ public class ShotEngine : MonoBehaviour
             Manager.dropCoin = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            PlayerMovement.score += 10;
+            PlayerMovement.score += 10; 
+            LevelManager.enemyAmount--;
             //EnemyManager.enemyCount--;
         }
     }

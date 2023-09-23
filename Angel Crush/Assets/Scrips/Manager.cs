@@ -6,16 +6,19 @@ public class Manager : MonoBehaviour
 {
     //Game Objects & Transforms
     public GameObject coin;
+    public GameObject enemy;
     public Transform enemyLoaction;
     Vector2 coinExit;
     Vector2 coinForce;
 
     //Variables
     public static bool dropCoin;
+    bool allEnemiesOut;
     // Start is called before the first frame update
     void Start()
     {
         dropCoin = false;
+        allEnemiesOut = false;
     }
 
     // Update is called once per frame
@@ -28,6 +31,21 @@ public class Manager : MonoBehaviour
             //DropCoins();
             dropCoin = false;
         }
+        if (allEnemiesOut == false)
+        {
+            StartCoroutine(CreateDemons());
+            allEnemiesOut = true;
+        }
+    }
+    IEnumerator CreateDemons()
+    {
+        for (int i = 0; i < LevelManager.enemyAmount; i++)
+        {
+
+            Instantiate(enemy, new Vector2(Random.Range(-2.3f, 2.31f), 2.8f), enemy.transform.rotation);
+            yield return new WaitForSeconds(Random.Range(0.5f, 1.6f));
+        }
+        allEnemiesOut = true;
     }
     /*void DropCoins()
     {
