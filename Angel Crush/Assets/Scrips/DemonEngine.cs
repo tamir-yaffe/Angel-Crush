@@ -6,7 +6,6 @@ public class DemonEngine : MonoBehaviour
 {
     public GameObject demon;
     
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +15,7 @@ public class DemonEngine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         transform.Translate(0, -2 * Time.deltaTime, 0);
         if (transform.position.y <-5.7f)
         {

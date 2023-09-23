@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShotEngine : MonoBehaviour
 {
     public static bool dead;
+    public static Vector2 deamonPos;
     void Start()
     {
         dead = false;
@@ -23,8 +24,8 @@ public class ShotEngine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            deamonPos = new Vector2(transform.position.x, transform.position.y);
             dead = true;
-            Manager.dropCoin = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
             PlayerMovement.score += 10; 

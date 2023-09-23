@@ -7,18 +7,17 @@ public class Manager : MonoBehaviour
     //Game Objects & Transforms
     public GameObject coin;
     public GameObject enemy;
-    public Transform enemyLoaction;
     Vector2 coinExit;
     Vector2 coinForce;
 
     //Variables
     public static bool dropCoin;
-    bool allEnemiesOut;
+    bool allEnemiesOut = false;
     // Start is called before the first frame update
     void Start()
     {
         dropCoin = false;
-        allEnemiesOut = false;
+        
     }
 
     // Update is called once per frame
@@ -44,7 +43,7 @@ public class Manager : MonoBehaviour
             Instantiate(enemy, new Vector2(Random.Range(-2.3f, 2.31f), 2.8f), enemy.transform.rotation);
             yield return new WaitForSeconds(Random.Range(0.5f, 1.6f));
         }
-        allEnemiesOut = true;
+        
     }
     /*void DropCoins()
     {
@@ -55,6 +54,6 @@ public class Manager : MonoBehaviour
 
     void CreateCoin()
     {
-        Instantiate(coin, new Vector2(transform.position.x, transform.position.y), coin.transform.rotation);
+        Instantiate(coin, ShotEngine.deamonPos,coin.transform.rotation);
     }
 }

@@ -625,7 +625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 7104660857690325630, guid: 53986793b07c63940858ce1576565f04, type: 3}
   enemy: {fileID: 2471036021783681331, guid: 33f40603502cbe24484a5f621bc5f1da, type: 3}
-  enemyLoaction: {fileID: 0}
 --- !u!1 &1378296938
 GameObject:
   m_ObjectHideFlags: 0
