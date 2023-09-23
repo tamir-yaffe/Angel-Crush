@@ -20,17 +20,6 @@ public class CoinEngine : MonoBehaviour
         if(transform.position.y < -5.7f)
         {
             Destroy(gameObject);
-        }
-
-        if (ShotEngine.dead== true)
-        {
-            CreateCoin();
-            ShotEngine.dead = false;
-        }
-    }
-
-    void CreateCoin()
-    {
-        Instantiate(coin, new Vector2(transform.position.x, transform.position.y), coin.transform.rotation);
+        } 
     }
 }

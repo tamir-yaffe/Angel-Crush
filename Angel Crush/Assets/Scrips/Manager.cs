@@ -26,10 +26,10 @@ public class Manager : MonoBehaviour
     {
         //coinExit = new Vector2(enemyLoaction.position.x, enemyLoaction.position.y);
         //coinForce = new Vector2(Random.Range(0, 1.5f), Random.Range(0, 1.5f));
-        if (dropCoin)
+        if (ShotEngine.dead == true)
         {
-            //DropCoins();
-            dropCoin = false;
+            CreateCoin();
+            ShotEngine.dead = false;
         }
         if (allEnemiesOut == false)
         {
@@ -41,7 +41,6 @@ public class Manager : MonoBehaviour
     {
         for (int i = 0; i < LevelManager.enemyAmount; i++)
         {
-
             Instantiate(enemy, new Vector2(Random.Range(-2.3f, 2.31f), 2.8f), enemy.transform.rotation);
             yield return new WaitForSeconds(Random.Range(0.5f, 1.6f));
         }
@@ -53,4 +52,9 @@ public class Manager : MonoBehaviour
         coin.AddComponent<Rigidbody2D>();
         coin.GetComponent<Rigidbody2D>().AddForce(coinForce);
     }*/
+
+    void CreateCoin()
+    {
+        Instantiate(coin, new Vector2(transform.position.x, transform.position.y), coin.transform.rotation);
+    }
 }
