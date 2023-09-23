@@ -48,9 +48,4 @@ public class PlayerMovement : MonoBehaviour
             dir = 0;
         }
     }
-<<<<<<< HEAD
-   
-
-=======
->>>>>>> 967cbb4d2617b8012344fa405e097e8fc9cc4f05
 }
